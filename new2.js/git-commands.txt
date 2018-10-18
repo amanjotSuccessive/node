@@ -1,0 +1,104 @@
+git log - show commit logs
+
+git init -The git init command creates a new Git repository. It can be used to convert an existing, unversioned project to a Git repository or initialize a new, empty repository
+
+git log - shows you a log of previous commits (commit history accessible from current commit).
+
+git init -The git init command creates a new Git repository. It can be used to convert an existing, unversioned project to a Git repository or initialize a new, empty repository
+
+git rm <file1> <file2> - remove file from the working tree and from the index
+
+git status - Displays the state of the working directory
+
+git config --global user.name "Name"    - It configure our Author name ie. used when we commits.
+
+git config --global user.email "Email"  - It configure our Author email ie. used when we commits.
+
+git init 				- Create a new local repository
+
+git clone <path> 			- Checkout a repository
+
+git add <filename>			- Adding file to staging area
+
+git commit -m "Message"			- Commit changes to head (not to remote server)
+
+git push origin master 			- Push changes to master branch of repository
+
+git checkout -b <branchname>		- Create a new branch and switch to it
+
+git checkout <branchname>		- Switch to a new branch
+
+git branch 				- List all the branches
+
+git branch -d <branchname> 		- Delete the branch
+
+git push origin <branchname>		- Push the branch to remote repository
+
+git push --all origin			- Push all the branches to remote repository
+
+git pull				- Fetch and merges the changes on remote server to local repository
+
+git merge <branchname>			- Merge a different branch to active branch
+
+git fetch 				-Instead of drop all the changes and commit fetch the   latest history
+
+git clone <url> - To get clone of the repository.
+
+git clone <url> -b <branch name> --single-branch <path> - To get clone of the particular branch.
+
+git branch - To get list of the available branches.
+
+git branch <name> - To create a new branch.
+
+git checkout -b <name of branch> - To select that particular branch for further process.
+
+git status - To check weather the file is staged or not.
+
+git add <file name> - To change particular not staged/untracked file to staged file.
+
+git add -u - To change all the not staged files/untracked files to staged files.
+
+git add <name> - To add the folder with the required name in the branch.
+
+git commit -m "title" - To add the comment for the particular commit.
+
+git push origin <name of branch> - To push the changes made by you on local to the server repository branch.
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+git pull - Fetch and merge changes on the remote server to your working directory.
+
+git fetch - instead, to drop all your local changes and commits, fetch the latest history from the server and point your local master branch 
+
+>>>>>>> 304413fb8e1414261e4dba2018fcf9310a17fbee
+git pull <remote> - fetch the specified remote copy of current branch and merge into  local copy
+
+git commit --ammend - Rewriting the most recent commit message.
+
+git add . - to save all the changes
+
+<<<<<<< HEAD
+>>>>>>> 54501119724fa55eb939478a99c033058c62662d
+=======
+git branch -d <branch_name> : To delete a branch locally
+
+git remote add origin <server>  -  If you haven't connected your local repository to a remote server, add the server to be able to push to it:
+
+git remote -v  --  List all currently configured remote repositories:
+
+git reset -- Resets your index and working directory to the state of your last commit.
+
+git tag --Tags a specific commit with a simple, human readable handle that never moves.
+
+git diff --Generates patch files or statistics of differences between paths or files in your git repository, or your index or your working directory
+
+git archive -- Creates a tar or zip file including the contents of a single tree from your repository.
+
+git gc -- Garbage collector for your repository. Optimizes your repository. Should be run occasionally. 
+
+git prune --Removes objects that are no longer pointed to by any object in any reachable branch. 
+
+git add . - to save all the changes
+
+>>>>>>> 304413fb8e1414261e4dba2018fcf9310a17fbee

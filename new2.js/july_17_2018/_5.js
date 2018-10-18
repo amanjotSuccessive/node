@@ -1,0 +1,8 @@
+let year  =parseInt(prompt("Enter Year"))
+let month =parseInt(prompt("Enter month"))
+let date  =parseInt(prompt("Enter date"))
+let d1= new Date()
+console.log(d1)
+let d2= new Date(year,month-1,date)
+console.log(d2)
+console.log(d1-d2)

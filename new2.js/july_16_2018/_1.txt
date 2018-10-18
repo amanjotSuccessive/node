@@ -1,0 +1,15 @@
+ans1.1
+25
+50
+25
+12
+
+ans1.2
+rty,asd
+rty,14
+
+ans1.3
+20
+xyz
+20
+xyz

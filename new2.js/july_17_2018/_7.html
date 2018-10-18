@@ -1,0 +1,55 @@
+<html><head></head><body>
+    <td><input type="button" id="btnAdd" class="button-add" onclick="insertRow();" value="ADD"></td>
+    <table id="myTable" border="solid" >
+        <th>textarea</th>
+        <th>checkbox</th>
+
+    <tr>
+        <td><input type="text"     id="txt"    /></td>
+        <td><input type="checkbox" id="chkbox" class = 'chk' /></td>
+        
+    </tr>
+</table>
+<script>
+
+function insertRow(){
+            let table=document.getElementById("myTable");
+            let row=table.insertRow();            
+            let cell1=row.insertCell(0);
+            let cell2=row.insertCell(1);
+            let cell3=row.insertCell(2);
+            
+            let element1=document.createElement("input");
+            element1.type="text";
+            element1.name="txt"
+            cell1.appendChild(element1);
+
+            let element2=document.createElement("input");
+            element2.type="checkbox";
+            element2.name="chkbox";
+            element2.className="chk";
+            cell2.appendChild(element2);
+
+}
+
+var rmvBtn = document.getElementById('chk');
+
+rmvBtn.addEventListener('click', function(){
+   var rmvCheckBoxes = document.getElementsByName('test');
+
+    for(var i = 0; i < rmvCheckBoxes.length; i++)
+    {
+        if(rmvCheckBoxes[i].checked)
+        {
+            removeElm(rmvCheckBoxes[i]);    
+        }
+    }  
+});
+
+function removeElm(elm){
+   elm.parentElement.removeChild(elm);
+}
+
+
+</script>
+</body></html>

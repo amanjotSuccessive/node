@@ -1,0 +1,92 @@
+.part1 {
+    background: black;
+    width: 30%;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0%;
+    height: 100%;
+}
+
+.part2 {
+    background: lightgreen;
+    width: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    left: 30%;
+    height: 100%;
+}
+
+spam {
+    font-weight: bold;
+    left: 20%;
+}
+
+h1 {
+    color: white;
+    display: inline;
+}
+
+#user {
+    top: 0%;
+    padding: 5%;
+    color: white;
+    font-weight: 10em;
+    box-sizing: border-box;
+    display: block;
+    background-color: darkgreen;
+}
+
+#login {
+    position: absolute;
+    top: -3%;
+    color: black;
+    font-weight: 10em;
+    background-color: green;
+    font-weight: 10em;
+    box-sizing: border-box;
+    display: block;
+    padding: 2%;
+    width: 100%;
+}
+
+nav {
+    position: relative;
+    color: white;
+}
+
+a {
+    padding: 5%;
+    color: white;
+}
+
+#Company {
+    color: blueviolet;
+}
+
+footer {
+    background-color: chocolate;
+    position: absolute;
+    bottom: 0%;
+    width: 90%;
+    padding: 5%;
+}
+
+#detail {
+    display: inline;
+}
+
+#aman {
+    font-weight: bold;
+    color: #67a91c;
+    padding-left: 25%;
+    padding-top: 10%;
+}
+
+img {
+    height: 100px;
+    border-radius: 50%;
+}
+
+.form {
+    padding: 10%;
+}

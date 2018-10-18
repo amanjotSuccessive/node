@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Validator</title>
+    </head>
+    <body>
+        <form>
+            <div>
+                <label for="text">Text Input</label>
+                <input type="text" id="text" required> 
+            </div>
+        <br>
+            <div>
+                <label for="minmaxlength">PHONE no.</label>
+                <input type="text" id="minmaxlength" minlength="10" maxlength="10" title="need attention">
+            </div>
+        <br>
+            <div>
+                <label for="text">Email</label>             
+                <input type="text" id="password" pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/" required>
+            </div>   
+        <br>           
+            <input type="submit" class="button" value="Submit">
+        </form>
+    </body>
+</html>

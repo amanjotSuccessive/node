@@ -1,0 +1,23 @@
+p{
+    float: bottom;
+}
+.notesTextField{
+    display: inline;
+    
+}
+header{
+    padding: 3%;
+    background-color: chocolate;
+    color: White;
+    border: solid;
+
+}
+#bankUse{
+    background: blanchedalmond;
+    padding: 1%;
+}
+.customerUse
+{
+    background: grey;
+    padding: 1%;
+}

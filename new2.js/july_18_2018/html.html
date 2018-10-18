@@ -1,0 +1,52 @@
+<html>
+    <head>
+            <script src="js.js"></script>
+            <link rel="stylesheet" type="text/css" href="css.css">
+    </head>
+    
+    <body>
+        <div class="part1">
+            <form >
+                    <div>
+                        <label for="bookName">Book Name &emsp;: </label>
+                        <input type="text" id="bookNameID" name="authorName"
+                        pattern="/[a-zA-Z\s]/" value="bookName" required> 
+                    </div>
+                <br>
+                    <div>
+                        <label for="authorName">Author Name : </label>
+                        <input type="text" id="authorNameID" name="authorName" 
+                         value="authorName" required  >
+                    </div>
+                <br>
+                    <div>
+                        <label for="text">Email &emsp;&emsp;&ensp;&emsp;:</label>             
+                        <input type="text" id="emailID" value="email" required>
+                    </div>   
+                <br>     
+                <div>        
+                        <input type="checkbox" id="readCheck" >
+                        <b>You read it?</b> 
+                </div>   
+                <br>    
+                     <input type="button" class="pushButton"  onclick="insertRow();" value="Submit">      
+                     <button type="reset"  value="Reset">Reset</button>
+                </form>
+        </div>
+
+
+        <div class="part2">
+            <input type="text" name="searchBox" id="searchBoxID" placeholder="Book Name" > 
+            <input type="button" name="searchBtn" id="searchBtnID"  value="Search" onclick="bookNameSearch();" > <br><br>
+            <table id="myTable" border="solid">
+                <th>Book Name</th>
+                <th>Author Name</th>
+                <th>Read/Unread</th>
+                
+            </table>
+        </div>
+
+
+
+
+</body></html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="task.js"></script>
+    <link href="task.css" rel="stylesheet">
+</head>
+
+<body id="body" >
+    <header> Please reload after every transaction. </header>
+    <section>
+        <article id="bankUse">
+            <div>
+                <span>For Bank Use Only</span>
+            </div>
+            <div>Enter the number of Notes:
+                <br>
+                <input type='text' placeholder="Number of 200 Notes" class='setAvailableNotes' id='available__200' value =3>
+                <input type='text' placeholder="Number of 500 Notes" class='setAvailableNotes' id='available__500' value =3>
+                <input type='text' placeholder="Number of 1000 Notes" class='setAvailableNotes' id='available_1000'value =3>
+            </div>
+        </article>
+        <article class='customerUse'>
+            <div > For Customer Use Only</div>
+            <div>
+                <input type='text' placeholder="withdraw Amount"  id='withdrawalAmountId'>
+                <input type='button' value="Withdraw" id='withdrawalAmountBtnId' onclick='Atm.GiveAmount()' >
+
+            </div>
+            <div>
+                
+                You get Notes:
+                <br>
+               <!-- <input type='text' class='getNotes' id='_200'>  -->
+               <!-- <input type='text' class='getNotes' id='_500'>  -->
+               <!-- <input type='text' class='getNotes' id='_1000'>  -->
+            </div>
+        </article>
+    </section>
+</body>
+
+</html>
