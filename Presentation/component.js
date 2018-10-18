@@ -1,0 +1,1 @@
+//home/amanjot/Presentation/component.js
