@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    let lastAccessedIndex = 0;
+
+    function loadData() {
+        loadTable();
+    }
+
+    function loadTable(startIndex = 0) {
+        $.getJSON("https://jsonplaceholder.typicode.com/todos?completed=true", function (data) {
+            // console.log(data);
+            // console.log(typeof (data));
+            // var items = [];
+
+
+            console.log(startIndex)
+            let i = startIndex;
+            let j = 0;
+            let temp;
+            let table = document.getElementById("jsonTable")
+
+            $("#jsonTable td").remove();
+
+            let cell = []
+            $.each(data, function (key, val) {
+                // console.log("array length", data.length);
+                let row = table.insertRow();
+                j = 0;
+                cell[0] = row.insertCell(0);
+                cell[1] = row.insertCell(1);
+                cell[2] = row.insertCell(2);
+                cell[3] = row.insertCell(3);
+                temp = Object.values(data)[i];
+                //console.log(temp);
+                $.each(temp, function (key, val) {
+                    //cell[i] = document.createElement("tr")
+                    cell[j].innerHTML = val;
+                    //console.log("val", i, key,val);
+                    j++;
+                    //items.push();
+                    //console.log(Object.values(temp));//121
+                });
+
+                i++;
+                //console.log(key !== 2)
+                console.log(key, i, startIndex, startIndex + 9);
+
+                return (key !== 9);
+            });
+            console.log(".............")
+
+            //  console.log(items)
+        });
+    }
+
+    $(function () {
+        $()
+        $.getJSON("https://jsonplaceholder.typicode.com/todos", function (data) {
+            arrayLength = data.length;
+
+        });
+
+    });
+</script>
+
+
+<body onload="loadData()">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+
+    <table id="jsonTable" class="table-striped table-bordered table-sm table-dark table-hover">
+        <th>UserId</th>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Completed</th>
+    </table>
+    <ul class="pagination">
+
+        <li class="page-item">
+            <a class="page-link" href="#" onclick="loadTable(0)">1</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="#" onclick="loadTable(10)">2</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="#" onclick="loadTable(20)">3</a>
+        </li>
+
+    </ul>
+
+</body>
+
+</html>

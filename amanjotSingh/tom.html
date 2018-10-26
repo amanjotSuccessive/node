@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tom</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="tom.js"></script>
+</head>
+
+
+</style>
+
+<body onload="loadData()">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+
+    <table id="jsonTable" class="table-striped table-bordered table-sm table-dark table-hover">
+
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email Address</th>
+
+    </table>
+    <ul class="pagination" id="pages">
+
+        <li class="page-item">
+            <a class="page-link" onclick="loadTable(0,-1)">Pre</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" onclick="loadTable(0,1)">1</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" onclick="loadTable(0,2)">2</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" onclick="loadTable(0,3)">3</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" onclick="loadTable(0,4)">4</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" onclick="loadTable(0,5)">5</a>
+        </li>
+
+        <li class="page-item">
+            <a class="page-link" onclick="loadTable(0,0)">Next</a>
+        </li>
+    </ul>
+    <button class="btn btn-primary" data-toggle="collapse" data-target="#demo">Sort By :-></button>
+
+    <div class="btn-group collapse" id="demo">
+        <button type="button" class="btn btn-primary" onclick="sortBy('firstName')">firstName</button>
+        <button type="button" class="btn btn-primary" onclick="sortBy('lastName')">lastName</button>
+        <button type="button" class="btn btn-primary" onclick="sortBy('emailAddress')">emailAddress</button>
+    </div>
+
+
+    <!-- Button to Open the Modal -->
+    <br>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" disabled id="editData">
+        Enter Data
+    </button>
+
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Enter Data</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                   <br> First Name :<input type="text"   id ="modalFirstName" pattern="/[A-Za-z]{3,15}/" name= "firstName"> 
+                   <br> Last Name  :<input type="text"   id ="modalLastName"  pattern="/[A-Za-z]{3,15}/" name= "lastName">
+                   <br> Email Address:<input type="text" id ="modalEmail"     pattern="/[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}/igm" name="emailAddress">
+                   <br> <input type="button" class="btn btn-primary" id = "modalButton"  value = "Submit" onclick= "submitData()">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

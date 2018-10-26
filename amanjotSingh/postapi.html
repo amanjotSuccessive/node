@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <script src="jque.js"></script>
+    <script>
+        //post
+        $(function () {
+            var jqxhr = $.ajax({
+                url: "http://assessment.aspcore.net/students/13",
+                type: 'PUT',
+                data: {
+                
+                    firstName: "MESSaaI",
+                    lastName: "RENALDO",
+                    emailAddress: "ultimateS@gmail.com",
+                    registrationDate: "3011-01-01T00:00:00"
+                },
+
+                success: function (result) {
+                   // document.writeln(result)
+                    console.log(result)
+                }
+            });
+        });
+
+        //.................................................................................
+        // var jqxhr = $.post("https://jsonplaceholder.typicode.com/todos?completed=true", function () {
+        //         console.log(jqxhr);
+        //         // alert("success");
+        //     })
+        //     .done(function (data) {
+        //         console.log(data)
+        //         alert("second success");
+        //     })
+        //     .fail(function () {
+        //         alert("error");
+        //     })
+        //     .always(function () {
+        //         alert("finished");
+        //     });
+    </script>
+
+
+</head>
+
+<body>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
